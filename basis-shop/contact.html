@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>basis shop</title>
+
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- leaflet.js inladen -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <script src="js/map.js" type="module"></script>
+    <script src="js/script.js" type="module"></script>
+</head>
+<body>
+    <header>
+        <img src="assets/imgs/morocoo.jpeg" alt="logo van basis webshop" id="logo">
+        <h2>Atlas MMA</h2>
+        <nav>
+            <a href="index.html">home</a>
+            <a href="shop.html">webshop</a>
+            <a href="contact.html">contact</a>
+            <a href="klanten.html">klanten</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Contacteer ons</h1>
+        <section id="form">
+            <form action="">
+                <label for="name">Naam: </label>
+                <input type="text" name="name" id="name" placeholder="voornaam achternaam" required>
+                <br>
+                <label for="email">E-mail: </label>
+                <input type="email" name="email" id="email" placeholder="jouw@email.com" required>
+                <br>
+                <label for="message">Jouw vraag: </label>
+                <br>
+                <textarea name="message" id="" cols="30" rows="10" placeholder="plaats hier jouw vraag" required></textarea>
+            </form>
+        </section>
+        <section id="store">
+            <h2>Onze winkel:</h2>
+            <address>
+                AP hogeschool<br>
+                Ellermanstraat 33<br>
+                2000 Antwerpen
+            </address>
+            <div id="map"></div>
+        </section>
+    </main>
+    <aside>
+        <section id="hours">
+            <h2>Openingsuren</h2>
+            <ul>
+                <li>ma: 8u - 18u</li>
+                <li>di: 8u - 18u</li>
+                <li>woe: 8u - 18u</li>
+                <li>do: 8u - 18u</li>
+                <li>vr: 8u - 18u</li>
+            </ul>
+        </section>
+    </aside>
+    <footer>
+        <p>Copyright &copy; 2023</p>
+    </footer>
+</body>
+</html>

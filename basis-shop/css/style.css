@@ -1,0 +1,223 @@
+@import url(reset.css);
+
+:root {
+    --yellow: #fbc40e;
+    --blue: #343f71;
+    --light: #e9d8e4;
+    --orange: #f34c19;
+}
+
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+    display: grid;
+    grid-template-areas: 
+        'header header'
+        'main aside'
+        'footer footer';
+    grid-template-columns: 2fr 1fr;
+}
+
+header {
+    grid-area: header;
+
+    background-color: darkgray;
+    padding: 0 2em;
+    margin-bottom: 2em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+header img{
+    height: 50%;
+    max-height: 80px;
+}
+header #logo {
+    margin: 1em;
+    border-radius: 50%;
+}
+
+header nav {
+    margin-right: 2em;
+    font-family:sans-serif;
+}
+
+header img{
+    height: 100px;
+}
+
+header nav a {
+    font-size: 1.2em;
+    padding: .3em;
+    color: black;
+    border: 1px solid darkgray;
+    border-radius: 10%;
+    background-color: white;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    color: var(--orange)
+}
+
+/* ik heb hier een class gemaakt die ingeroepen gaat worden via JS als ik op de wishlist button druk */
+.addToWishlistBtn.colored {
+    background-color: var(--orange);
+    color: white;
+  }  
+
+main {
+    grid-area: main;
+    padding: 0 2rem;
+}
+
+main section {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--blue);
+    margin-bottom: 2rem;
+}
+
+main #section{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    align-items:flex-end;
+    justify-content: center;
+    gap: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-left: 17%;
+    width: 1200px;
+}
+
+main #section section{
+    padding: 20px;
+    background-color: #343f71;
+    color: #e9d8e4;
+    border: #343f71 solid;
+    border-radius: 10%;
+    width: 300px;
+}
+
+main #section img{
+    border-radius: 20%;
+    max-width: 300px;
+}
+
+main section#bestSellers,
+main #products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2em;
+}
+main td img{
+    max-height: 50px;
+    height: 50px;
+}
+main section#bestSellers article,
+main #products article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    background-color: darkred;
+    max-width: 30%;
+    border-radius: 10%;
+}
+
+main section#bestSellers h2 {
+    flex: 0 0 100%;
+}
+
+main section#bestSellers article img,
+main section#bestSellers article p,
+main #products article img,
+main #products article p {
+    max-width: 90%;
+    max-height: 65%;
+    border-radius: 10%;
+}
+
+
+main #store #map {
+    width: 100%;
+    height: 200px;
+}
+
+button {
+    display: inline-block;
+    margin: 10px; 
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: black;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+ 
+
+aside {
+    grid-area: aside;
+    padding: 0 2em;
+}
+aside img{
+    height: 50px;
+}
+aside section {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--orange);
+    margin-bottom: 1rem;
+}
+
+aside article{
+    display: flex;
+    gap: 20px;
+}
+
+aside #store #map {
+    height: 200px;
+}
+
+aside h3{
+    display: inline-flex;
+    padding: 15px;
+    width: 120px;
+    height: 10px;
+    font-size: smaller;
+}
+
+aside td{
+    display: inline-flex;
+    border: black solid;
+    padding: 15px;
+    width: 120px;
+    height: 80px;
+
+}
+
+aside #hours ul {
+    list-style-type: none;
+}
+
+footer {
+    grid-area: footer;
+
+    background-color: var(--orange);
+    color: var(--light);
+    text-align: center;
+    padding: 1em;
+}
+
+/* typography */
+h1, h2, h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+h1 {font-size: 3em;}
+h2 {font-size: 2.4em;}
+h3 {font-size: 1.6em;}
